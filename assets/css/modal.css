@@ -1,0 +1,119 @@
+/* 
+    Document Written by Richard Anderson (https://richardjanderson.me)!
+*/
+
+/* Modal (Core) Structure! */
+.modal{
+  /* Default View (Hide, on webpage load)! */
+  display: none; /* Hidden by default */
+
+  /* Active View (Show, on button press (js function))! */
+  position: fixed;
+  z-index: 1;
+
+  /* Display Position's!  */
+  padding-top: 100px;
+  left: 12.5%; /* OverRuled in @Media Tag Below! */
+  top: 0;
+
+  /* Size Information! */
+  height: 100%;
+  width: 75%; /* OverRuled in @Media Tag Below! */
+
+  /* Design Information! */    
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Media Tags for Size Issues (Screen Sizes for Pop-UP Box)! */
+/* Larger Screens! */
+@media only screen and (min-width: 920px){
+  .modal{
+    width: 60%;
+    left: 20%;
+  }
+}
+/* Smaller Screens! */
+@media only screen and (max-width: 920px){
+  .modal{
+    width: 90%;
+    left: 5%;
+  }
+}
+
+/* Modal Content */
+.modal-content{
+  /* Display Position's!  */
+  border: 1px solid #888;
+  position: relative;
+  margin: auto;
+  padding: 0;
+    
+  /* Design Information! */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #fefefe;
+  border-radius: 25px;
+  overflow: hidden;
+
+  /* Animation Configurations (Filter)! */
+    /* General Browsers (Chrome, Edge, Firefox & Brave)! */ 
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+    /* Browser Specific (Apple Safari, Kindle Browser, and Tizen Browser)! */
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+}
+
+/* Animation Configurations (General)! */
+  /* General Browsers (Chrome, Edge, Firefox & Brave)! */ 
+@keyframes animatetop{
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+  /* Browser Specific (Apple Safari, Kindle Browser, and Tizen Browser)! */
+@-webkit-keyframes animatetop{
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+/* Modal (Sections) Formatting! */
+.modal-header{
+  background-color: #5cb85c;
+  display: inline-flex;
+  color: white;
+  width: 100%;
+}
+
+.modal-body{
+  padding: 2px 16px;
+  color: black;
+}
+.modal-footer{
+  display: none;
+  /*
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  */
+}
+
+/* Modal Header Formatting! */
+.mh-left-side{
+  margin-left: 2.5%;
+  height: 100%;
+  width: 87.5%;
+}
+.mh-right-side{
+  margin-right: 2.5%;
+  height: 100%;
+  width: 7.5%;
+}
+
+/* Button Sections (Including Close)! */
+.close-button{
+  text-align: center;
+  margin-top: 15px; 
+  font-size: 32px;
+  cursor: pointer;
+}
+
+

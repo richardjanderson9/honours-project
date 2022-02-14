@@ -1,0 +1,42 @@
+/* 
+    Document Written by Richard Anderson (https://richardjanderson.me)!
+*/
+
+.formatting-center{
+    /* Center-Center */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.main-title{
+    text-decoration: underline;
+}
+
+.main-information{
+    margin-left: 15%;
+    width: 70%;
+    text-align: center;
+}
+
+.header-button{
+    /* Button Position! */
+    margin-top: 15px;
+    margin-bottom: 0px; 
+
+    /* Formatting for Button (header) */
+    background-color: #4bb523;
+    text-decoration: none;
+    border-radius: 24px;
+    color: white;
+    padding: 15px;
+    border: 0;
+
+    /* Cursor Design (Hover Button)! */
+    cursor: pointer;
+}

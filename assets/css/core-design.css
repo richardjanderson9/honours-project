@@ -2,8 +2,24 @@
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
 
-
 body{
+    /* Size */    
+    overflow: hidden;
+    height: auto;
+
+    /* Formatting */
+    display: flex;
+    flex-direction: column;
+
+    /* Page Colours */
     background-color: black;
 
+    /* Text Information! */
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: white;
+
+
 }
+
+
+

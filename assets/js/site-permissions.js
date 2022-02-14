@@ -3,6 +3,6 @@
 */
 
 
-function start_test(){
-    alert("Start Test!");
+function test_permissions(){
+    alert("Check Run!");
 }
