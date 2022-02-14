@@ -82,18 +82,16 @@
   color: white;
   width: 100%;
 }
-
 .modal-body{
   padding: 2px 16px;
   color: black;
 }
-.modal-footer{
-  display: none;
-  /*
-  padding: 2px 16px;
+.modal-footer-1{
   background-color: #5cb85c;
-  color: white;
-  */
+}
+/* Hidden! */
+.modal-footer-2{
+  display: none;
 }
 
 /* Modal Header Formatting! */
@@ -113,6 +111,26 @@
   text-align: center;
   margin-top: 15px; 
   font-size: 32px;
+  cursor: pointer;
+}
+
+/* Start Test Buttion */
+.button-location{  
+  /* Button Position! */
+  margin: 12.5px 37.5%;
+}
+
+.modal-button{
+  /* Formatting for Button (footer) */
+  background-color: white;
+  text-decoration: none;
+  border-radius: 24px;
+  color: black;
+  padding: 15px;  
+  width: 25%;
+  border: 0;
+
+  /* Cursor Design (Hover Button)! */
   cursor: pointer;
 }
 

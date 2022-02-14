@@ -40,3 +40,8 @@
     /* Cursor Design (Hover Button)! */
     cursor: pointer;
 }
+
+.note-information{
+    text-decoration: underline;
+    font-size: 20px;
+}

@@ -31,10 +31,10 @@
         <div id="main-information-js" class="main-information-css">
             <h1 class="main-title">Fingerprint Machine!</h1>
             <p class="main-information">This website will conduct five tests on your machine to obtain your device's fingerprint; please read the privacy policy for more information!</p>
-            <button id="start-test-js" class="header-button test-button" type="button" onclick="start_test();">Start Test!</button>
+            <button id="start-test-js" class="header-button test-button" type="button" onclick="modal_show('test-consent');">Start Test!</button>
             <br>
-
-            <button id="privacy-policy-js" class="header-button privacy-button" type="button" onclick="privacy_policy();">Privacy Policy!</button>
+            <button id="privacy-policy-js" class="header-button privacy-button" type="button" onclick="modal_show('privacy-view');">Privacy Policy!</button>
+            <p class="note-information">Note: You Must Press the Buttons Twice!</p>
         </div>
     </header>
 
@@ -57,26 +57,48 @@
     </footer>
 
     <!-- Modals Section! | Can only be used with Javascript "/assets/js/modal-settings.js" -->
-    <div id="myModal" class="modal">
+    <div id="Modal-Test" class="modal">
+        <div class="modal-content">
+            <!-- Header! -->
+            <div class="modal-header">
+                <h2 class="mh-left-side">Begin Test?</h2>
+                <span class="mh-right-side close-button button-test">
+                    <i class="far fa-times-circle"></i>
+                </span>                
+            </div>
+            <!-- Body! -->
+            <div class="modal-body">
+                <p>The test will begin once the confirmation button is pressed. The device might freeze, an animation will be present to allow for a progress update.</p>
+                <p>Please Note: Eight Cookies will be placed on the device to help track the results; after the tests are complete, the information will be sent across a secure connection to its final storage location. All cookies will expire once the browser is closed!</p>
+            </div>
+            <!-- Footer! | Visable via CSS! -->
+            <div class="modal-footer-1">
+                <button class="button-location modal-button" onclick="start_tests();">Start Test!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals Section! | Can only be used with Javascript "/assets/js/modal-settings.js" -->
+    <div id="Modal-Privacy" class="modal">
         <div class="modal-content">
             <!-- Header! -->
             <div class="modal-header">
                 <h2 class="mh-left-side">Privacy Policy!</h2>
-                <span class="mh-right-side close-button">
+                <span class="mh-right-side close-button button-policy">
                     <i class="far fa-times-circle"></i>
-                </span>
-                
+                </span>                
             </div>
             <!-- Body! -->
             <div class="modal-body">
                 <p>This system is designed for personal users, not general users such as yourself. It collected data and generates fingerprints from this data. The application transports the information at the end of the process. Any un-verified devices will have their information disregarded.</p>
             </div>
             <!-- Footer! | HIDDEN via CSS! -->
-            <div class="modal-footer">
+            <div class="modal-footer-2">
                 <h3>Modal Footer</h3>
             </div>
         </div>
     </div>
+
 </div> 
    
 </body>
@@ -84,6 +106,8 @@
 <!-- Scripts (Non-Fingerprinting)! -->
 <script src="/assets/js/site-permissions.js"></script>
 <script src="/assets/js/modal-settings.js"></script>
-<script src="/assets/js/alert_message.js"></script>
+
+<!-- Scripts (Fingerprinting)! -->
+<script src="/assets/js/cookie-creator.js"></script>
 
 </html>

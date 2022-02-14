@@ -1,33 +1,50 @@
 /* 
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
-function privacy_policy(){
-    // Get the modal
-    var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("privacy-policy-js");
+/* Enables the Modals to Appear (once pressed)! */
+function modal_show(data){
+    // Sets up Variables, for future loop.
+    var start_test = "test-consent";
+    var privacy_policy = "privacy-view";
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close-button")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-    modal.style.display = "block";
+    // Loop to Process what Modal to Show the User! (Current 2)!
+    if (data == start_test){
+        var modal_id = "Modal-Test"; 
+        var button_id = "start-test-js"; 
+        var close_button_class = "button-test";      
+    }
+    else if(data == privacy_policy){
+        var modal_id = "Modal-Privacy";  
+        var button_id = "privacy-policy-js";        
+        var close_button_class = "button-policy"; 
+    }
+    else{
+        alert("An Error Has Occurred! Please reload the page, to try again!");
     }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
+    /* Code that Activates the Modals! */
+    // Gets Information from the HTML page via the ID Tags!
+        // Gets Modal Information! | Filter by Loop Above on Condition of If Loop!
+    var modal = document.getElementById(modal_id);
+        // Gets Button Information! | Filter by Loop Above on Condition of If Loop!
+    var button = document.getElementById(button_id);
+        // Gets Close Button Information!
+    var close_button = document.getElementsByClassName(close_button_class)[0];
+        // When the user clicks on one of the buttons (Test/Privacy) | Starts the Process! 
+    button.onclick = function(){
+        modal.style.display = "block";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
+        // When the user clicks on the close button (when modal is active)!
+    close_button.onclick = function(){
         modal.style.display = "none";
     }
-    }
+        // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event){
+        if (event.target == modal){
+            modal.style.display = "none";
+        }
+    }    
 }
-
 
 
