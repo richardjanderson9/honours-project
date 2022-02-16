@@ -2,6 +2,23 @@
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
 
-.fingerprint-status-css{
-    display: none;
+/* Enables the text to be on the same line (tag:<div>), but in different Paragraph'S (tag:<p>)! */
+.test-results-formatting{
+    display: inline-flex; 
+    margin-top: -12px;
+}
+
+/* 
+
+SPACE FOR FORMATTING!
+
+*/
+
+/* Enables Formatting (Make it look likes thiers a space between tag_1 and tag_2 (tag:<p>)! */
+.test-spacing-L{
+    margin-left: 0px;
+}
+.test-spacing-R{
+    margin-left: 5px;
+    color: red;
 }

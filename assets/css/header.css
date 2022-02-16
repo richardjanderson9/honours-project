@@ -18,6 +18,10 @@
     text-decoration: underline;
 }
 
+.main-title-size{
+    font-size: 36px;
+}
+
 .main-information{
     margin-left: 15%;
     width: 70%;

@@ -1,14 +1,10 @@
 /* 
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
-function start_tests(){
-    place_cookies();
-}
 
 function place_cookies(){
-
     // Sets up Cookie Names! (INTO AN ARRAY)!
-    const cookie_number = []
+    const cookie_number = [] // Information is enter via tags below {0-7}.
     cookie_number[0] = ("test_start_time"); // Tracks the starting time of the test!
     cookie_number[1] = ("test_end_time"); // Tracks the ending time of the test!
     cookie_number[2] = ("transmit_time"); // Tracks the trasmit time of the results of the test!
