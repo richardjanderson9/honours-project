@@ -1,0 +1,92 @@
+<!-- Document Written by Richard Anderson (https://richardjanderson.me)! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page Meta Data! -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tab Data! -->
+    <title>Fingerprint Tests | Honours Project!</title>
+    <link rel="icon" href="/assets/img/tab_icons/fingerprint_black.png">
+
+    <!-- StyleSheets (Non-Fingerprinting)! -->
+        <!-- External Sheets! -->
+    <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"> <!-- Text | Google Fonts! -->
+    <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.12.0/css/all.css"> <!-- Icons! -->
+        <!-- Local Sheets! -->             
+    <link rel="stylesheet" type="text/css" href="/assets/css/fingerprint-data.css">  
+    <link rel="stylesheet" type="text/css" href="/assets/css/core-design.css">   
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css"> <!-- Github Button! -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css"> <!-- Main Area (Center)! -->
+
+</head>
+<body onload="run_tests();">
+
+    <!-- Main Page -->
+    <header class="formatting-center text-center">
+        <div class="main-title">
+            <h2 class="main-title-size">
+                Test Results!
+            </h2>
+        </div>
+            <!-- fingerprint-data.css -->
+        <div id="fingerprint-status-js" class="fingerprint-status-css">
+            <!-- Test 1: Fingerprint.JS-->
+            <div class="test-banner test-results-formatting">
+                <p id="test-1-title" class="test-spacing-L">Test 1:</p>
+                <p id="test-1-information" class="test-spacing-R">Not Started!</p>
+            </div>
+            <br> <!-- Break for formatting! -->
+            <!-- Test 2: {Test_Name Unknown!} -->
+            <div class="test-banner test-results-formatting">
+                <p id="test-2-title" class="test-spacing-L">Test 2:</p>
+                <p id="test-2-information" class="test-spacing-R">Not Started!</p>
+            </div>
+            <br> <!-- Break for formatting! -->
+            <!-- Test 3: {Test_Name Unknown!} -->
+            <div class="test-banner test-results-formatting">
+                <p id="test-3-title" class="test-spacing-L">Test 3:</p>
+                <p id="test-3-information" class="test-spacing-R">Not Started!</p>
+            </div>
+            <br> <!-- Break for formatting! -->
+            <!-- Test 4: {Test_Name Unknown!} -->
+            <div class="test-banner test-results-formatting">
+                <p id="test-4-title" class="test-spacing-L">Test 4:</p>
+                <p id="test-4-information" class="test-spacing-R">Not Started!</p>
+            </div>
+            <br> <!-- Break for formatting! -->
+            <!-- Test 5: {Test_Name Unknown!} -->
+            <div class="test-banner test-results-formatting">
+                <p id="test-5-title" class="test-spacing-L">Test 5:</p>
+                <p id="test-5-information" class="test-spacing-R">Not Started!</p>
+            </div>
+            
+        </div> 
+    </header>    
+
+    <!-- Footer! | Information at Bottom of Page (Github)! -->
+    <footer class="footer-position">
+        <div class="footer-button-position">            
+            <a class="footer-button" href="https://github.com/richardjanderson9/honours-project" target="_blank">
+                <i class="fas fa-external-link-alt"></i>  GitHub Repository
+            </a>
+        </div>
+    </footer>
+
+</div>    
+</body>
+
+<!-- Scripts (Non-Fingerprinting)! -->
+<script src="/assets/js/start_tests.js"></script>
+
+<!-- Scripts (Fingerprinting)! -->
+<script src="/assets/js/fingerprinting-test/test-1.js"></script> <!-- FingerprintJS (API)! -->
+<script src="/assets/js/fingerprinting-test/test-2.js"></script> <!-- Test Type (Data System)!-->
+<script src="/assets/js/fingerprinting-test/test-3.js"></script> <!-- Test Type (Data System)!-->
+<script src="/assets/js/fingerprinting-test/test-4.js"></script> <!-- Test Type (Data System)!-->
+<script src="/assets/js/fingerprinting-test/test-5.js"></script> <!-- Test Type (Data System)!-->
+
+</html>
