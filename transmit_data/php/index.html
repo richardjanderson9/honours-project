@@ -8,12 +8,17 @@
 
     <!-- StyleSheets! -->
     <link rel="stylesheet" type="text/css" href="/assets/css/core-design.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
     <!-- ENDS!! -->
 </head>
-<body onload="test_re_direct();">
+<body onload="page_re_direct('auto');">
 
-    <h1>Nothing to See Here!</h1>
-    
+      <!-- Main Page | Keeps Information Center of Page! -->
+    <header class="formatting-center text-center">
+        <h1 class="main-title">Nothing to See Here!</h1>
+        <button id="start-test-js" class="header-button test-button" type="button" onclick="page_re_direct('forced');">Force Re-Direct!</button>
+    </header>
+
 </body>
 
 <!-- Script to Force Re-Direct! -->

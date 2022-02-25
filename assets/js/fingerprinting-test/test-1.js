@@ -1,8 +1,8 @@
-
 /* 
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
-// Test Data: ??
+// Test Data: (General: Industry Test)
+// Data Source: https://github.com/fingerprintjs/fingerprintjs
 
 
 function fingerprint_test_1(not_started, in_progress, reporting, complete, delay_results, colour_change_value){

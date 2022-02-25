@@ -6,6 +6,7 @@
 .test-results-formatting{
     display: inline-flex; 
     margin-top: -12px;
+    font-size: 16px;
 }
 
 /* 
@@ -15,10 +16,30 @@ SPACE FOR FORMATTING!
 */
 
 /* Enables Formatting (Make it look likes thiers a space between tag_1 and tag_2 (tag:<p>)! */
-.test-spacing-L{
+.test-spacing-L{ 
     margin-left: 0px;
 }
 .test-spacing-R{
     margin-left: 5px;
     color: red;
+}
+.test-spacing-I{
+    color: white;
+    cursor: pointer;
+}
+.formatting-center-icon{    
+    margin: 16px 6px;
+    font-size: 13.5px;
+}
+.adapt-title{
+    color: whute;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+.adapt-information{
+    color: black;
+    font-size: 16px;
+    margin: 10px;
+    padding: 0px;
 }

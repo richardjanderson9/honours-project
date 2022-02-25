@@ -86,11 +86,11 @@
   padding: 2px 16px;
   color: black;
 }
-.modal-footer-1{
+.modal-footer-show{
   background-color: #5cb85c;
 }
 /* Hidden! */
-.modal-footer-2{
+.modal-footer-hide{
   display: none;
 }
 

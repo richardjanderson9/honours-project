@@ -11,12 +11,6 @@
     /* Positioning */
     position: fixed;
     bottom: 2.5vh;
-    
-    /* Box Border 
-    border-color: black;
-    border-style: dotted;
-    border-width: 2px; 
-    */  
 } 
 
 .footer-button-position{
@@ -37,3 +31,7 @@
     padding: 15px;
 }
 
+.button-github{
+    padding: 0;
+    margin: 0;
+}

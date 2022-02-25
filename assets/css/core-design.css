@@ -2,6 +2,11 @@
     Document Written by Richard Anderson (https://richardjanderson.me)!
 */
 
+/* Centeralises the management of the external css files! */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"); /* Fonts (from Google!) */
+@import url("https://use.fontawesome.com/releases/v5.12.0/css/all.css"); /* Icons (fontawesome!) */
+
+/* Forces General Settings Across All Pages! */
 body{
     /* Size */    
     overflow: hidden;
@@ -17,9 +22,9 @@ body{
     /* Text Information! */
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     color: white;
-
-
 }
 
-
-
+/* Enables the Information to be Used where Required! */
+.text-center{
+    text-align: center;
+}
