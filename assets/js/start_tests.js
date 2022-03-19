@@ -22,18 +22,25 @@ function run_tests(){
     var in_progress = ("Currently Active!");
     var reporting = ("Reporting Results!");
     var complete = ("Test Complete!");
-    // For the time Delay! | // 1000ms = 1 second!
-    var delay_results = 0; // Delay for the time between tests! (2.5 Seconds)!
-    var delay_test = 0; // Delay for the time between tests! (10 Seconds)!
-    // For Colour Change!
-    var colour_change_value = "#4bb523"; // Green!
+    var failed = ("Test Failed!");
+    // For the time Delay! (User-Set)!
+    const user_delay_results = (1.25); // User Controlled Delay, Between Results! | 0.25
+    const user_delay_test = (2.5); // User Controlled Delay, Between Tests! | 2
+    // Milliseconds to Seconds!
+    const milliseconds = (1000);
+    // Time Delay Calulation!
+    var delay_results = ((milliseconds) * (user_delay_results));
+    var delay_test = ((milliseconds) * (user_delay_test));
 
-    // Time Delay for Each Time of 10 Seconds ! | To enable machine to stabilise!
-    
+    // For Colour Change!
+    const colour_change_green = ("#4bb523"); // Green!
+    const colour_change_red = ("#f03600"); // Red!
+
+    /*
+     Sets Time Delay between Tests to enable the machine to stabilise! Controlled by the delay_test varable above!
+    */// Time Delay for Each Time of 10 Seconds ! | To enable machine to stabilise!
     setTimeout(function() {
-        fingerprint_test_1(not_started, in_progress, reporting, complete, delay_results, colour_change_value); //fingerprinting-test/test-1.js
+        fingerprint_test_1(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-1.js
     }, delay_test);
 
-    //Check Run!
-    //
 }

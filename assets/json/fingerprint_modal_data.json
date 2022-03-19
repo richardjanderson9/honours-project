@@ -2,32 +2,37 @@
     "fingerprint_modal": {
         "data_1": [
             {
-                "title": "Test 1: {Name of Test}",
-                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec."
+                "title": "Test 1: Fingerprint-JS",
+                "information": "Test 1 Includes utilising an open-source solution to fingerprint users' devices when they load a page or trigger a function within a javascript file. In this case, it is the first rather than the latter. The solution has an enterprise version that will not be used here due to its implementation utilising an API service.",
+                "testdata": "Data Storage: Cookie 'test_1_data'."  
             }
         ],
         "data_2": [
             {
-                "title": "Test 2: {Name of Test}",
-                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec."
+                "title": "Test 2: Canvas Graphic",
+                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec.",
+                "testdata": "Data Storage: Cookie 'test_2_data'."  
             }
         ],
         "data_3": [
             {
-                "title": "Test 3: {Name of Test}",
-                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec."
+                "title": "Test 3: WebGL",
+                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec.",
+                "testdata": "Data Storage: Cookie 'test_3_data'."  
             }
         ],
         "data_4": [
             {
-                "title": "Test 4: {Name of Test}",
-                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec."
+                "title": "Test 4: Browser Data",
+                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec.",
+                "testdata": "Data Storage: Cookie 'test_4_data'."  
             }
         ],
         "data_5": [
             {
-                "title": "Test 5: {Name of Test}",
-                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec."
+                "title": "Test 5: OS Assistant",
+                "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed id. Tortor aliquam nulla facilisi cras fermentum odio eu. Eu consequat ac felis donec.",
+                "testdata": "Data Storage: Cookie 'test_5_data'."  
             }
         ]
     }

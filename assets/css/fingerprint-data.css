@@ -32,14 +32,21 @@ SPACE FOR FORMATTING!
     font-size: 13.5px;
 }
 .adapt-title{
-    color: whute;
+    color: white;
     font-size: 16px;
     padding: 0px;
     margin: 0px;
 }
-.adapt-information{
+.adapt-information{    
+    text-align: center;
     color: black;
     font-size: 16px;
     margin: 10px;
+    padding: 0px;
+}
+.adapt-footer{
+    color: white;
+    font-size: 16px;
+    margin: 0px 0px 0px 20px;
     padding: 0px;
 }

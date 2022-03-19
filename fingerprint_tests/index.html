@@ -17,13 +17,13 @@
     <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"> <!-- Text | Google Fonts! -->
         <!-- Local Sheets! -->             
     <link rel="stylesheet" type="text/css" href="/assets/css/fingerprint-data.css">  
-    <link rel="stylesheet" type="text/css" href="/assets/css/core-design.css">   
+    <link rel="stylesheet" type="text/css" href="/assets/css/core-design.css"> <!-- General Formatting! --> 
     <link rel="stylesheet" type="text/css" href="/assets/css/footer.css"> <!-- Github Button! -->
     <link rel="stylesheet" type="text/css" href="/assets/css/header.css"> <!-- Main Area (Center)! -->
     <link rel="stylesheet" type="text/css" href="/assets/css/modal.css"> <!-- Modal Settings!  -->   
 
 </head>
-<body onload="run_tests(); modal_general('data');">
+<body onload="run_tests(); modal_general();">
 
     <!-- Main Page -->
     <header class="formatting-center text-center">
@@ -37,8 +37,9 @@
             <!-- Test 1: Fingerprint.JS! -->
             <div class="test-banner test-results-formatting">
                 <p id="test-1-title" class="test-spacing-L">Test 1:</p>
-                <p id="test-1-information" class="test-spacing-R">Not Started!</p>
+                <p id="test_data_1" class="test-spacing-R">Not Started!</p>
                 <div id="data-1" class="test-spacing-I formatting-center-icon">
+                    <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
                         <i class="fas fa-info"></i>
                     </button>
@@ -50,6 +51,7 @@
                 <p id="test-2-title" class="test-spacing-L">Test 2:</p>
                 <p id="test-2-information" class="test-spacing-R">Not Started!</p>
                 <div id="data-2" class="test-spacing-I formatting-center-icon">
+                    <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
                         <i class="fas fa-info"></i>
                     </button>
@@ -61,6 +63,7 @@
                 <p id="test-3-title" class="test-spacing-L">Test 3:</p>
                 <p id="test-3-information" class="test-spacing-R">Not Started!</p>
                 <div id="data-3" class="test-spacing-I formatting-center-icon">
+                    <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
                         <i class="fas fa-info"></i>
                     </button>
@@ -72,6 +75,7 @@
                 <p id="test-4-title" class="test-spacing-L">Test 4:</p>
                 <p id="test-4-information" class="test-spacing-R">Not Started!</p>
                 <div id="data-4" class="test-spacing-I formatting-center-icon">
+                    <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
                         <i class="fas fa-info"></i>
                     </button>
@@ -83,6 +87,7 @@
                 <p id="test-5-title" class="test-spacing-L">Test 5:</p>
                 <p id="test-5-information" class="test-spacing-R">Not Started!</p>
                 <div id="data-5" class="test-spacing-I formatting-center-icon">
+                    <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
                         <i class="fas fa-info"></i>
                     </button>
@@ -120,9 +125,17 @@
                 </h2>              
             </div>            
             <!-- Footer! | HIDDEN via CSS! -->
-            <div class="modal-footer-hide">
-                <button class="button-location modal-button" onclick="start_tests();">Start Test!</button>
-            </div>
+            <div class="footer-size-small">
+                <div class="modal-footer">
+                    <h2 id="modal-tags" class="mh-full adapt-footer">
+                        <!-- Filled by /assets/js/modal_information.js && /assets/json/modal_data.json! -->
+                    </h2>
+                        <!-- Cookie Infomration! -->           
+                    <button id="btn_cookie_data" class="modal-button-cookie btn_cookie_data" style="cursor: pointer;">
+                        <i class="fas fa-cookie-bite"> View Data</i>
+                    </button>
+                </div>          
+            </div>  
         </div>
     </div>
 
@@ -130,9 +143,9 @@
 </body>
 
 <!-- Scripts (Non-Fingerprinting)! -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="/assets/js/information-button.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/assets/js/modal_fingerprint.js"></script>
+<script src="/assets/js/cookie-creator.js"></script>
 <script src="/assets/js/start_tests.js"></script>
 
 
