@@ -1,3 +1,3 @@
 // File Divded!
 
-// New Files: "modal-{name}.js"!
+// New Files: "modal_{name}.js"!

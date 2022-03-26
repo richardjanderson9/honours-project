@@ -13,8 +13,6 @@
     <link rel="icon" href="/assets/img/tab_icons/fingerprint_black.png">
 
     <!-- StyleSheets (Non-Fingerprinting)! -->
-        <!-- External Sheets! -->
-    <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"> <!-- Text | Google Fonts! -->
         <!-- Local Sheets! -->             
     <link rel="stylesheet" type="text/css" href="/assets/css/fingerprint-data.css">  
     <link rel="stylesheet" type="text/css" href="/assets/css/core-design.css"> <!-- General Formatting! --> 
@@ -49,7 +47,7 @@
             <!-- Test 2: Unknown! -->
             <div class="test-banner test-results-formatting">
                 <p id="test-2-title" class="test-spacing-L">Test 2:</p>
-                <p id="test-2-information" class="test-spacing-R">Not Started!</p>
+                <p id="test_data_2" class="test-spacing-R">Not Started!</p>
                 <div id="data-2" class="test-spacing-I formatting-center-icon">
                     <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
@@ -61,7 +59,7 @@
             <!-- Test 3: Unknown! -->
             <div class="test-banner test-results-formatting">
                 <p id="test-3-title" class="test-spacing-L">Test 3:</p>
-                <p id="test-3-information" class="test-spacing-R">Not Started!</p>
+                <p id="test_data_3" class="test-spacing-R">Not Started!</p>
                 <div id="data-3" class="test-spacing-I formatting-center-icon">
                     <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
@@ -71,9 +69,9 @@
             </div>
             <br> <!-- Break for formatting! -->
             <!-- Test 4: Unknown! -->
-            <div class="test-banner test-results-formatting">
+            <div class="hide test-banner test-results-formatting">
                 <p id="test-4-title" class="test-spacing-L">Test 4:</p>
-                <p id="test-4-information" class="test-spacing-R">Not Started!</p>
+                <p id="test_data_4" class="test-spacing-R">Not Started!</p>
                 <div id="data-4" class="test-spacing-I formatting-center-icon">
                     <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
@@ -83,9 +81,9 @@
             </div>
             <br> <!-- Break for formatting! -->
             <!-- Test 5: Unknown! -->
-            <div class="test-banner test-results-formatting">
+            <div class="hide test-banner test-results-formatting">
                 <p id="test-5-title" class="test-spacing-L">Test 5:</p>
-                <p id="test-5-information" class="test-spacing-R">Not Started!</p>
+                <p id="test_data_5" class="test-spacing-R">Not Started!</p>
                 <div id="data-5" class="test-spacing-I formatting-center-icon">
                     <!-- Information Button! -->
                     <button id="btn_fingeprint_modal" class="btn_fingeprint_modal button-information" style="cursor: pointer;">
@@ -93,7 +91,12 @@
                     </button>
                 </div>              
             </div>
-            <br> <!-- Break for formatting! -->           
+            <!-- Send Data Button! -->
+            <div id="send_data_button" class="hide">
+                <button class="header-button" onclick="page_re_direct('start');">
+                    <i class="fas fa-paper-plane"></i>  Send Data!
+                </button>                          
+            </div>             
         </div> 
     </header>    
 
@@ -145,14 +148,16 @@
 <!-- Scripts (Non-Fingerprinting)! -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/assets/js/modal_fingerprint.js"></script>
+<script src="/assets/js/page-re_direct.js"></script>
 <script src="/assets/js/cookie-creator.js"></script>
 <script src="/assets/js/start_tests.js"></script>
+<script src="/assets/js/dev_tools.js"></script>
 
-
-<!-- Scripts (Fingerprinting)! -->
+<!-- Scripts (Fingerprinting)! | Local! -->
 <script src="/assets/js/fingerprinting-test/test-1.js"></script> <!-- FingerprintJS (API)! -->
 <script src="/assets/js/fingerprinting-test/test-2.js"></script> <!-- Test Type (Data System)!-->
 <script src="/assets/js/fingerprinting-test/test-3.js"></script> <!-- Test Type (Data System)!-->
-<script src="/assets/js/fingerprinting-test/test-4.js"></script> <!-- Test Type (Data System)!-->
-<script src="/assets/js/fingerprinting-test/test-5.js"></script> <!-- Test Type (Data System)!-->
+<!-- Scripts (Fingerprinting)! | External! -->
+<script src="/assets/js/fingerprinting-test/external/test-2-external.js"></script>
+<script src="/assets/js/fingerprinting-test/external/murmurhash3.js"></script>
 </html>

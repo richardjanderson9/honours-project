@@ -8,6 +8,10 @@
 function fingerprint_test_1(in_progress, reporting, complete, failed, delay_results, delay_test, colour_green, colour_red){
   // Information for the colour change!
   const id_varable_name = ("test_data_1"); // Sets ID Name (from '/fingerprint_tests/index.html') of Colour Change!
+  const test_number = (1);
+  const delay_check = (2);
+  // Delays Reporting of Results!
+  const final_delay = (test_number * delay_check);
   // Sets Information for colour change!
   var colour_change = (document.getElementById(id_varable_name)); // Sets HTML data into javascript varable!
   const colour_code_green = (colour_green);
@@ -68,7 +72,7 @@ function fingerprint_test_1(in_progress, reporting, complete, failed, delay_resu
     const single_fingerprint = (original_array.shift());
 
     // For Testing Only!!
-    console.log("Fingerprint 1:" + " " + single_fingerprint);
+    //console.log("Fingerprint 1:" + " " + single_fingerprint);
   
   // For Loop Starts!
     for (let counter = test_low; counter < test_runs; counter++){
@@ -87,10 +91,10 @@ function fingerprint_test_1(in_progress, reporting, complete, failed, delay_resu
       document.getElementById(id_varable_name).innerHTML = (reporting); // Text!
       colour_change.style.color = colour_code_green; // Colour!
     }, delay_results);
-    
-
+  
     // Sends Information to /assets/js/cookie-creator.js, for the overwrite of the information for each test (data taken from if_varable_name).
     cookie_write_test(id_varable_name, single_fingerprint, cookie_filter);
+    //world_end(id_varable_name);
 
     if (cookie_placed != "true"){
       setTimeout(function(){     
@@ -104,7 +108,7 @@ function fingerprint_test_1(in_progress, reporting, complete, failed, delay_resu
         // Changes the Data (Text and Colour)! 
         document.getElementById(id_varable_name).innerHTML = (complete); // Text!
         colour_change.style.color = colour_code_green; // Colour!
-      }, delay_results);
+      }, (delay_results * test_number));
     }
-  }  
+  }
 }

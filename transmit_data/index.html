@@ -29,9 +29,9 @@
         <div id="main-information-js" class="main-information-css">
             <h1 class="main-title">Transmission of Data!</h1>
             <p class="main-information">This page will transmit the data to a storage location based on Microsoft Azure, and it utilises the same network and security settings as this application.</p>
-            <button id="start-test-js" class="header-button test-button" type="button" onclick="modal_show('test-consent');">Send Data!</button>
+            <button class="header-button test-button" type="button" onclick="page_re_direct('save');">Send Data!</button>
             <br>
-            <button id="privacy-policy-js" class="header-button privacy-button" type="button" onclick="modal_show('privacy-view');">Destroy Data!</button>
+            <button id="privacy-policy-js" class="header-button privacy-button" type="button" onclick="page_re_direct('destory');">Destroy Data!</button>
             <!--<p class="note-information">Note: You Must Press the Buttons Twice!</p>-->
         </div>
     </header>
@@ -49,5 +49,10 @@
 </div> 
    
 </body>
+<!-- Scripts (Non-Fingerprinting)! -->
+<script src="/assets/js/page-re_direct.js"></script>
+<script src="/assets/js/dev_tools.js"></script>
+
+</html>
 
 </html>

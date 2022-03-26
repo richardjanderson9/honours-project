@@ -18,29 +18,85 @@ function start_tests(){
 function run_tests(){
     /* Varables */ 
     // For the status of the tests!
-    var not_started = ("Not Yet Active!");
+    var not_started = ("Loading!");
     var in_progress = ("Currently Active!");
     var reporting = ("Reporting Results!");
     var complete = ("Test Complete!");
     var failed = ("Test Failed!");
     // For the time Delay! (User-Set)!
-    const user_delay_results = (1.25); // User Controlled Delay, Between Results! | 0.25
-    const user_delay_test = (2.5); // User Controlled Delay, Between Tests! | 2
+    const user_delay_results = (0.5); // User Controlled Delay, Between Results! | 0.25
+    const user_delay_change = (1.00) // 
+    const user_delay_test = (2.25); // User Controlled Delay, Between Tests! | 2
+    
     // Milliseconds to Seconds!
     const milliseconds = (1000);
     // Time Delay Calulation!
     var delay_results = ((milliseconds) * (user_delay_results));
+    var delay_change = ((milliseconds) * (user_delay_change));
     var delay_test = ((milliseconds) * (user_delay_test));
 
     // For Colour Change!
+    const colour_change_yellow = ("#c9b906"); // Yellow!
     const colour_change_green = ("#4bb523"); // Green!
     const colour_change_red = ("#f03600"); // Red!
 
+    // Sets Data for Loop!
+    const number_of_test = ("6");
+    const number_zero = ("1");
+
+/* Starts the Tests! */
+    function change_test_status(){
+        setTimeout(function() {
+            for (let counter = number_zero; counter < (number_of_test); counter++){
+                var number_print = ("test_data_" + counter);          
+                var colour_change = (document.getElementById(number_print));
+                document.getElementById(number_print).innerHTML = (not_started); // Text!
+                colour_change.style.color = colour_change_yellow; // Colour!            
+            }
+        }, delay_change);
+              
+    }
+
+    function test_1(){
+        setTimeout(function(){
+            fingerprint_test_1(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-1.js
+        }, delay_test);
+    }
+
+    function test_2(){
+        setTimeout(function(){
+            //console.log("Hello World - 2!");
+            fingerprint_test_2(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-2.js
+        }, delay_test);
+    }
+    function test_3(){
+        setTimeout(function(){
+            //console.log("Hello World - 3!");
+            fingerprint_test_3(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-3.js
+        }, delay_test);
+    }
     /*
-     Sets Time Delay between Tests to enable the machine to stabilise! Controlled by the delay_test varable above!
-    */// Time Delay for Each Time of 10 Seconds ! | To enable machine to stabilise!
-    setTimeout(function() {
-        fingerprint_test_1(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-1.js
-    }, delay_test);
+    function test_4(){
+        setTimeout(function(){
+            console.log("Hello World - 4!");
+            //fingerprint_test_4(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-4.js
+        }, delay_test);
+    }
+    function test_5(){
+        setTimeout(function(){
+            console.log("Hello World - 5!");
+            //fingerprint_test_5(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-5.js
+        }, delay_test);
+    }
+    */
+
+    // Runs the Funciton!
+    change_test_status();
+    test_1();
+    test_2();
+    test_3();
+    //test_4();
+    //test_5();
+
 
 }

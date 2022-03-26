@@ -28,3 +28,8 @@ body{
 .text-center{
     text-align: center;
 }
+
+/* Enables Parts to be hidden from view, they will still be in the code! */
+.hide{
+    display: none;
+}
