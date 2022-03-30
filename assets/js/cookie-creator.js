@@ -9,14 +9,11 @@ function place_cookies(){
     const cookie_number = [] // Information is enter via tags below {0-8}.
     cookie_number[0] = ("test_start_time"); // Tracks the starting time of the test!
     cookie_number[1] = ("test_end_time"); // Tracks the ending time of the test!
-    cookie_number[2] = ("transmit_time"); // Tracks the trasmit time of the results of the test!
-    cookie_number[3] = ("transmited"); // Checks if data has been sent to the storage location!
-    cookie_number[4] = ("test_data_1"); // Contains the fingerprint from test number 1!.
-    cookie_number[5] = ("test_data_2"); // Contains the fingerprint from test number 2!.
-    cookie_number[6] = ("test_data_3"); // Contains the fingerprint from test number 3!.
-    //cookie_number[7] = ("test_data_4"); // Contains the fingerprint from test number 4!.
-    //cookie_number[8] = ("test_data_5"); // Contains the fingerprint from test number 5!.
-
+    cookie_number[2] = ("test_data_1"); // Contains the fingerprint from test number 1!.
+    cookie_number[3] = ("test_data_2"); // Contains the fingerprint from test number 2!.
+    cookie_number[4] = ("test_data_3"); // Contains the fingerprint from test number 3!.
+    cookie_number[5] = ("random_id"); // Random ID for transfering data!
+ 
     // Sets up Cookie Data (will be replaced with fingerprint @ later stage)!
     var cookie_value = "_blank_"; // Enables Cookies to be placed on some browsers (as they are required if no data is present)!
 
@@ -32,8 +29,16 @@ function place_cookies(){
     const date = d.toLocaleDateString(); 
     const time = d.toLocaleTimeString(); 
     var date_time = (date + " @ " + time);
+    
+    // Generates Random Data!
+    // Generates Random ID for the Cookie, which enables secure tranit to the database!
+    const random = (length = 8) => {
+        return Math.random().toString(18).substr(2, length);
+    };
+    var str_random_id = (random(16));
 
     document.cookie = cookie_number[0] + "=" + date_time + ";" + "; path=" + cookie_path; // Places the Cookie, using the Information above.
+    document.cookie = cookie_number[5] + "=" + str_random_id + ";" + "; path=" + cookie_path; // Places the Cookie, using the Information above.
 }
 
 function cookie_write_test(id_varable_name, single_fingerprint, cookie_filter){

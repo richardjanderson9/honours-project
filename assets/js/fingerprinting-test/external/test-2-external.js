@@ -1,5 +1,3 @@
-
-
   var Fingerprint = function (options) {
     var nativeForEach, nativeMap;
     nativeForEach = Array.prototype.forEach;

@@ -138,22 +138,18 @@ function cookie_filter(data){
             
             if (parent_id == "data-1"){
                 var cookie_name = cookie_data.test_data_1;
+                var test_number = "1";
             }
             else if (parent_id == "data-2"){
                 var cookie_name = cookie_data.test_data_2;
+                var test_number = "2";
             }
             else if (parent_id == "data-3"){
                 var cookie_name = cookie_data.test_data_3;
-            }
-            else if (parent_id == "data-4"){
-                var cookie_name = cookie_data.test_data_4;
-            }
-            else if (parent_id == "data-5"){
-                var cookie_name = cookie_data.test_data_5;
+                var test_number = "3";
             }
             
             if (cookie_name != blank_check){
-                alert("Your results will be stated on the next pop-up box, please press 'OK' to continue!")
                 alert(cookie_name);
             }
             else{

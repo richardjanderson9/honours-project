@@ -25,7 +25,7 @@ function run_tests(){
     var failed = ("Test Failed!");
     // For the time Delay! (User-Set)!
     const user_delay_results = (0.5); // User Controlled Delay, Between Results! | 0.25
-    const user_delay_change = (1.00) // 
+    const user_delay_change = (1.00); // 
     const user_delay_test = (2.25); // User Controlled Delay, Between Tests! | 2
     
     // Milliseconds to Seconds!
@@ -75,28 +75,12 @@ function run_tests(){
             fingerprint_test_3(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-3.js
         }, delay_test);
     }
-    /*
-    function test_4(){
-        setTimeout(function(){
-            console.log("Hello World - 4!");
-            //fingerprint_test_4(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-4.js
-        }, delay_test);
-    }
-    function test_5(){
-        setTimeout(function(){
-            console.log("Hello World - 5!");
-            //fingerprint_test_5(in_progress, reporting, complete, failed, delay_results, delay_test, colour_change_green, colour_change_red); //fingerprinting-test/test-5.js
-        }, delay_test);
-    }
-    */
 
     // Runs the Funciton!
     change_test_status();
     test_1();
     test_2();
     test_3();
-    //test_4();
-    //test_5();
 
 
 }

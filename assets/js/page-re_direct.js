@@ -22,13 +22,17 @@ function page_re_direct(data){
     else if (data == "destory"){
         var page_location = ("/transmit_data/php/destory.php");
     }
-    else if (data == "save"){
+    else if (data == "save" || data == "start"){
         var page_location = ("/transmit_data/php/send.php");
     }
+    else if (data == "failure"){
+        var page_location = ("/")
+    }
+    /*
     else if (data == "start"){
         var page_location = ("/transmit_data/")
     }
-
+    */
     // Checks for Environment (Live/Testing)!
     /* Loop Checking for Environment (Live/Testing). */
     if (active_port == "80" || active_port == "5500" || active_port == "8080" || active_port == "19653"){
@@ -45,6 +49,8 @@ function page_re_direct(data){
     window.location.href = domain_data; // Forces Re-Direct!
 }
 
-
-
+// For the PHP page only!
+function homepage(){
+    page_re_direct('failure');
+}
 
