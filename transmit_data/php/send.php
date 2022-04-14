@@ -33,14 +33,14 @@
         // Test Data!
         $test_1 = $_COOKIE["test_data_1"];
         $test_2 = $_COOKIE["test_data_2"];
-        $test_3 = $_COOKIE["test_data_3"];    
+        $test_3 = $_COOKIE["test_data_3"];   
         /*
             Information for the configuration of the database connection! Information on each line will be provided by //{comment}!
         */
         // Static Details for Database Connection!
         $servername = "localhost"; // Hostname of device! (Local Connection)!
         $db_name = "fingerprint_data"; // Database name for data!
-        $tb_name = "tests";
+        $tb_name = "data";
         // Information of user with minium ermissions required!
         $username = "php_application"; // Username of Database!
         $password = "XdSM4kTtZdybk3jb"; // // Password of User!
@@ -49,45 +49,46 @@
         /*
             Blocks Blank Data Moving to the Server, at the very last the cookie should contain "_blank_" (due to js file)!
         */
-        if (($test_1 == "") or ($test_2 == "") or ($test_3 = "")){
+        if (($test_1 == "") or ($test_2 == "") or ($test_3 == "")){
             $message_to_user = "No Cookies have been found! Please re-start the test to try again!";
             $test_failure = "true";
-            display_info_user($message_to_user, $test_failure);            
+            //display_info_user($message_to_user, $test_failure);            
         }
         else{
             /*
-            Checks if user has already sent data! (VIA: random_id)!
+                Checks if user has already sent data! (VIA: random_id)!
             */
             $query_check = "SELECT * from $tb_name WHERE random_id='$random_id'";
             $check_for_repeat = $conn->query($query_check);
+            $check_for_repeat = $conn->query($query_check);
             if($check_for_repeat->num_rows != 0) {
-                $query_add_data = "";
-                
+                $query_add_data = "";                
             }
             else{
                 $query_add_data = "INSERT INTO $tb_name (`random_id`, `start_time`, `end_time`, `test_1`, `test_2`, `test_3`) VALUES ('$random_id', '$start_time', '$end_time', '$test_1', '$test_2', '$test_3')";
             }
-            /*
+        /*
             Will add data if its not present in the database (already)! 
-            */
-            if (($conn->query($query_add_data) === TRUE) && ($query_add_data != "")){
-                $message_to_user = "New record created successfully!";
-                $test_failure = "false";
-            }
-            elseif ($query_add_data == ""){
-                $message_to_user = "Your data already exists!";
-                $test_failure = "false";
-            }
-            else{
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-            // Starts Next Function!            
-            display_info_user($message_to_user, $test_failure);    
-            // Closes the database connection (inportant for security and stop unwanted changes)!
-            $conn->close();
-                // Visable HTML Code | HEADER!            
-        }     
-        
+        */
+        if (($conn->query($query_add_data) === TRUE) && ($query_add_data != "")){
+            $message_to_user = "New record created successfully!";
+            $test_failure = "false";
+        }
+        elseif ($query_add_data == ""){
+            $message_to_user = "Your data already exists!";
+            $test_failure = "false";
+        }
+        else{
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        // Starts Next Function!            
+        display_info_user($message_to_user, $test_failure);    
+        // Closes the database connection (inportant for security and stop unwanted changes)!
+        $conn->close();
+            // Visable HTML Code | HEADER!            
+    }      
+
+
         function display_info_user($message_to_user, $test_failure){
             if ($test_failure == "true"){
             // Adds in Return button for user to RESTART the test!
@@ -123,8 +124,7 @@
                     </div>
                 </footer>
                 ');
-        }
-        
+        }   
     ?>
 </body>
 

@@ -15,10 +15,10 @@
 
 .footer-button-position{
     /* Center-Center */
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-button{

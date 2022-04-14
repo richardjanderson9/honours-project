@@ -17,6 +17,7 @@ function download_data(){
     //console.log(device_data_joined);
     
     // Gets Data from Cookies!
+    var random_id = all_cookie.random_id;
     var start_time = all_cookie.test_start_time;
     var end_time = all_cookie.test_end_time;
     var cookie_data_1 = all_cookie.test_data_1; 
@@ -25,6 +26,7 @@ function download_data(){
     
     // Sets Data into file!
     const data1 = [
+        ["Random ID", random_id],
         ["Start Test", start_time],
         ["End Time", end_time],
         ["Fingerprint 1:", cookie_data_1],
